@@ -1,4 +1,5 @@
-'use client'
+"use client"
+import { ClerkProvider, SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
 import { Button } from "@mantine/core"
 
 export default function Home() {
@@ -7,6 +8,14 @@ export default function Home() {
   }
   return (
     <>
+      <header>
+        <SignedOut>
+          <SignInButton />
+        </SignedOut>
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
+      </header>
       <Button variant="filled" onClick={test}>
         Button
       </Button>

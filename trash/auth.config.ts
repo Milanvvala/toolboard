@@ -1,6 +1,5 @@
 import Github from "next-auth/providers/github"
 import Google from "next-auth/providers/google"
-import type { NextAuthConfig } from "next-auth"
 
 export default {
   providers: [
@@ -13,4 +12,4 @@ export default {
       clientSecret: process.env.GITHUB_CLIENT_SECRET ?? ""
     })
   ]
-} satisfies NextAuthConfig
+}

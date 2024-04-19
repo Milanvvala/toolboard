@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { ColorSchemeScript, createTheme, MantineProvider } from "@mantine/core"
 import "@mantine/core/styles.css"
+import { ClerkProvider } from "@clerk/nextjs"
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,13 +18,15 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <head>
-        <ColorSchemeScript />
-      </head>
-      <body>
-        <MantineProvider theme={theme}>{children}</MantineProvider>
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <head>
+          <ColorSchemeScript />
+        </head>
+        <body>
+          <MantineProvider theme={theme}>{children}</MantineProvider>
+        </body>
+      </html>
+    </ClerkProvider>
   )
 }

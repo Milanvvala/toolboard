@@ -2,11 +2,9 @@
 import { useState } from "react"
 import {
   Group,
-  Code,
   Box,
   Burger,
   Divider,
-  Skeleton,
   Text
 } from "@mantine/core"
 import { Logo } from "@/components/ui"

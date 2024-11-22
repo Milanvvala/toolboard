@@ -6,9 +6,9 @@ export default function page() {
     <>
       <Navbar />
       <Hero />
-      <NewsLetter />
+      {/* <NewsLetter /> */}
       {/* <Form /> */}
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 }
